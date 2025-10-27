@@ -3,18 +3,22 @@ using Restaurants.Domain.Entities;
 using Restaurants.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Restaurants.Dtos;
+using AutoMapper;
 
 namespace Restaurants.Application.Restaurants;
 
-internal class RestaurantsService(IRestaurantsRepository restaurantsRepository,
-    ILogger<RestaurantsService> logger) : IRestaurantsService
+internal class RestaurantsService(
+    IRestaurantsRepository restaurantsRepository,
+    ILogger<RestaurantsService> logger,
+    IMapper mapper
+    ) : IRestaurantsService
 {
     public async Task<IEnumerable<RestaurantDto>> GetAllRestaurants()
     {
         logger.LogInformation("Getting all restaurants");
         var restaurants = await restaurantsRepository.GetAllTask();
 
-        var restaurantsDtos = restaurants.Select(RestaurantDto.FromEntity);
+        var restaurantsDtos = mapper.Map<IEnumerable<RestaurantDto>>(restaurants);
         return restaurantsDtos!;
     }
 
@@ -23,7 +27,7 @@ internal class RestaurantsService(IRestaurantsRepository restaurantsRepository,
         logger.LogInformation("Getting restaurant with id {Id}", id);
         var restaurant = await restaurantsRepository.GetByIdTask(id);
 
-        var restaurantDto = RestaurantDto.FromEntity(restaurant);
+        var restaurantDto = mapper.Map<RestaurantDto?>(restaurant);
         return restaurantDto;
     }
 }
