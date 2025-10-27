@@ -28,7 +28,7 @@ internal class RestaurantSeeder(RestaurantsDBContext dbContext) : IRestaurantSee
             Description = "The best fast food in the world",
             Category = "FastFood",
             ContactEmail = "contact@mcdonalds.com",
-            hasDelivery = true,
+            HasDelivery = true,
             Address = new Address()
             {
                 Street = "123 Main St",
@@ -56,7 +56,7 @@ internal class RestaurantSeeder(RestaurantsDBContext dbContext) : IRestaurantSee
             Name = "Pizza Hut",
             Description = "Delicious pizza and more",
             Category = "Pizza",
-            hasDelivery = true,
+            HasDelivery = true,
             ContactEmail = "contact@pizzahut.com",
             ContactNumber = "987-654-3210",
             Address = new Address()
