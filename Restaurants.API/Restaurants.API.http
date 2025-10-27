@@ -7,7 +7,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=4
+@id=5
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
@@ -15,13 +15,13 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 {
-    "Name": "Salumeria",
-    "Description": "A culinary experience like no other",
-    "Category": "Fine Dining",
-    "HasDelivery": true,
-    "ContactEmail": "info@salumeria.gr",
-    "ContactNumber": "+30 210 1234567",
-    "City": "Patra",
-    "Street": "Trion Navrachon 24",
-    "PostalCode": "12345"
+    "Name": "Taste Bites",
+    "Description": "A cozy restaurant serving a variety of dishes",
+    "Category": "International Cuisine",
+    "HasDelivery": false,
+    "ContactEmail": "info@tastebites.gr",
+    "ContactNumber": "2101234567",
+    "City": "Athens",
+    "Street": "Ermou 123",
+    "PostalCode": "54321"
 }
