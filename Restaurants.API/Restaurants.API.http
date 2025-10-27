@@ -7,7 +7,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=5
+@id=8
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
@@ -15,13 +15,13 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 {
-    "Name": "Taste Bites",
-    "Description": "A cozy restaurant serving a variety of dishes",
-    "Category": "International Cuisine",
-    "HasDelivery": false,
-    "ContactEmail": "info@tastebites.gr",
-    "ContactNumber": "2101234567",
-    "City": "Athens",
-    "Street": "Ermou 123",
-    "PostalCode": "54321"
+    "Name": "Sirtaki",
+    "Description": "Best Greek Cuisine in town",
+    "Category": "Greek",
+    "HasDelivery": true,
+    "ContactEmail": "info@sirtaki.gr",
+    "ContactNumber": "1234567890",
+    "City": "London",
+    "Street": "4567 Maximilian St.",
+    "PostalCode": "12345"
 }
